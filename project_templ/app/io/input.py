@@ -3,20 +3,20 @@ import pandas as pd
 
 def input_text_from_console():
     """
-    Запитує текст у користувача та повертає його.
+    Requests text from the user and returns it.
     """
-    return input("Будь ласка, введіть текст: ")
+    return input("Please enter the text: ")
 
 
 def read_from_file(filename):
     """
-    Читає вміст файлу за допомогою вбудованих можливостей Python.
+    Reads the contents of a file using Python's built-in capabilities.
 
     Args:
-        filename (str): Шлях до файлу, який потрібно прочитати.
+        filename (str): The path to the file to read.
 
     Returns:
-        str: Вміст файлу.
+        str: File content.
     """
     with open(filename, 'r', encoding='utf-8') as file:
         return file.read()
@@ -24,13 +24,13 @@ def read_from_file(filename):
 
 def read_from_file_with_pandas(filename):
     """
-    Читає вміст файлу за допомогою бібліотеки Pandas.
+    Reads the contents of a file using the Pandas library.
 
     Args:
-        filename (str): Шлях до файлу, який потрібно прочитати.
+        filename (str): The path to the file to read.
 
     Returns:
-        DataFrame: Вміст файлу у формі DataFrame.
+        DataFrame: The contents of a file in the form of a DataFrame.
     """
     return pd.read_csv(filename, encoding='utf-8')
 

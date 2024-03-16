@@ -3,21 +3,21 @@ import pandas as pd
 
 def output_text_to_console(text):
     """
-    Виводить текст у консоль.
+    Outputs text to the console.
 
     Args:
-        text (str): Текст для виводу.
+        text (str): Text to output.
     """
     print(text)
 
 
 def write_to_file(filename, content):
     """
-    Записує текст до файлу за допомогою вбудованих можливостей Python.
+    Writes text to a file using Python's built-in capabilities.
 
     Args:
-        filename (str): Шлях до файлу, в який потрібно записати текст.
-        content (str): Текст для запису.
+        filename (str): The path to the file to write the text to.
+        content (str): Text to record.
     """
     with open(filename, 'w', encoding='utf-8') as file:
         file.write(content)
@@ -25,10 +25,10 @@ def write_to_file(filename, content):
 
 def write_to_file_with_pandas(filename, data):
     """
-    Записує дані до файлу у форматі CSV за допомогою бібліотеки pandas.
+    Writes data to a CSV file using the pandas library.
 
     Args:
-        filename (str): Шлях до файлу, у який буде здійснено запис.
-        data (DataFrame): Дані у форматі DataFrame, які потрібно записати.
+        filename (str): The path to the file to be written to.
+        data (DataFrame): The data in DataFrame format to be written.
     """
     data.to_csv(filename, index=False, encoding='utf-8')
