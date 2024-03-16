@@ -32,5 +32,8 @@ def read_from_file_with_pandas(filename):
     Returns:
         DataFrame: The contents of a file in the form of a DataFrame.
     """
-    return pd.read_csv(filename, encoding='utf-8')
+    try:
+        return pd.read_csv(filename, encoding='utf-8')
+    except pd.errors.EmptyDataError:
+        return pd.DataFrame()
 
